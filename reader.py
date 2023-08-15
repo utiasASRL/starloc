@@ -13,18 +13,25 @@ DATA_TYPES = ["uwb", "apriltag", "apriltag_calib", "imu"]
 # - apriltag_calib
 # - imu
 DATASET = "loop-3d_s3"
+DATA = ["uwb", "apriltag"]
 
 
-def read_params(dataset_root, dataset):
+def read_calib(dataset_root=DATASET_ROOT, dataset=DATASET):
+    import json
+
+    fname = os.path.join(dataset_root, "data", dataset, "calib.json")
+    with open(fname, "r") as f:
+        calib_dict = json.load(f)
+    return calib_dict
+
+
+def read_params(dataset_root=DATASET_ROOT, dataset=DATASET):
     import json
 
     fname = os.path.join(dataset_root, "dataset_params.json")
     with open(fname, "r") as f:
         dataset_dict = json.load(f)
     return [dict_ for dict_ in dataset_dict if dict_["name"] == dataset][0]
-
-
-DATA = ["uwb", "apriltag"]
 
 
 def read_landmarks(dataset_root=DATASET_ROOT, dataset=DATASET, data=DATA):
