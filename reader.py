@@ -6,7 +6,7 @@ import pandas as pd
 DATASET_ROOT = str(Path(__file__).parent)
 
 
-DATA_TYPES = ["uwb", "apriltag", "apriltag_calib", "imu"]
+DATA_TYPES = ["uwb", "apriltag", "apriltag_cal", "imu"]
 # choose any combination of DATA_TYPES
 # - uwb
 # - apriltag
