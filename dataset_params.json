@@ -1,0 +1,156 @@
+[
+  {
+    "name": "loop-2d_s1",
+    "group": "loop-2d",
+    "setup": "s1",
+    "landmarks": "v1",
+    "tags": "tags_2.config"
+  },
+  {
+    "name": "loop-2d-fast_s1",
+    "group": "loop-2d-fast",
+    "setup": "s1",
+    "landmarks": "v1",
+    "tags": "tags_2.config"
+  },
+  {
+    "name": "loop-3d_s1",
+    "group": "loop-3d",
+    "setup": "s1",
+    "landmarks": "v1",
+    "tags": "tags_2.config"
+  },
+  {
+    "name": "loop-2d_s2",
+    "group": "loop-2d",
+    "setup": "s2",
+    "landmarks": "v1",
+    "tags": "tags_2.config"
+  },
+  {
+    "name": "loop-2d-fast_s2",
+    "group": "loop-2d-fast",
+    "setup": "s2",
+    "landmarks": "v1",
+    "tags": "tags_2.config"
+  },
+  {
+    "name": "loop-3d_s2",
+    "group": "loop-3d",
+    "setup": "s2",
+    "landmarks": "v1",
+    "tags": "tags_2.config"
+  },
+  {
+    "name": "zigzag_s2",
+    "group": "zigzag",
+    "setup": "s2",
+    "landmarks": "v1",
+    "tags": "tags_2.config"
+  },
+  {
+    "name": "eight_s2",
+    "group": "eight",
+    "setup": "s2",
+    "landmarks": "v1",
+    "tags": "tags_2.config"
+  },
+  {
+    "name": "loop-2d_s3",
+    "group": "loop-2d",
+    "setup": "s3",
+    "landmarks": "v2",
+    "tags": "tags_1.config"
+  },
+  {
+    "name": "loop-2d-fast_s3",
+    "group": "loop-2d-fast",
+    "setup": "s3",
+    "landmarks": "v2",
+    "tags": "tags_1.config"
+  },
+  {
+    "name": "loop-3d_s3",
+    "group": "loop-3d",
+    "setup": "s3",
+    "landmarks": "v2",
+    "tags": "tags_1.config"
+  },
+  {
+    "name": "zigzag_s3",
+    "group": "zigzag",
+    "setup": "s3",
+    "landmarks": "v2",
+    "tags": "tags_1.config"
+  },
+  {
+    "name": "eight_s3",
+    "group": "eight",
+    "setup": "s3",
+    "landmarks": "v2",
+    "tags": "tags_1.config"
+  },
+  {
+    "name": "loop-2d_s4",
+    "group": "loop-2d",
+    "setup": "s4",
+    "landmarks": "v2",
+    "tags": "tags_1.config"
+  },
+  {
+    "name": "zigzag_s4",
+    "group": "zigzag",
+    "setup": "s4",
+    "landmarks": "v2",
+    "tags": "tags_1.config"
+  },
+  {
+    "name": "grid_s3",
+    "group": "other",
+    "setup": "s3",
+    "landmarks": "v2",
+    "tags": "tags_1.config"
+  },
+  {
+    "name": "ell_s3",
+    "group": "other",
+    "setup": "s3",
+    "landmarks": "v2",
+    "tags": "tags_1.config"
+  },
+  {
+    "name": "loop-3d-z_s3",
+    "group": "other",
+    "setup": "s3",
+    "landmarks": "v2",
+    "tags": "tags_1.config"
+  },
+  {
+    "name": "apriltag_s3",
+    "group": "other",
+    "setup": "s3",
+    "landmarks": "v2",
+    "tags": "tags_1.config"
+  },
+  {
+    "name": "loop-2d_s5",
+    "group": "loop-2d",
+    "setup": "s5",
+    "landmarks": "v3",
+    "tags": "tags_1.config"
+  },
+  {
+    "name": "loop-2d-v2_s5",
+    "group": "other",
+    "setup": "s5",
+    "landmarks": "v3",
+    "tags": "tags_1.config"
+  },
+  {
+    "name": "loop-3d_s5",
+    "group": "loop-3d",
+    "setup": "s5",
+    "landmarks": "v3",
+    "tags": "tags_1.config"
+  }
+]
