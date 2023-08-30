@@ -52,6 +52,7 @@ def read_landmarks(dataset_root=DATASET_ROOT, dataset=DATASET, data=DATA):
                 dataset_root, "mocap", f"uwb_markers_{version}" + ".csv"
             )
             df = pd.read_csv(fname)
+            df.rename(columns={"Unnamed: 0": "id"}, inplace=True)
             df["data_type"] = "uwb"
             df_data.append(df)
         else:
