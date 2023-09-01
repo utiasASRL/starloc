@@ -1,17 +1,13 @@
 STAR-loc: Dataset for STereo And Range-based localization
 =========================================================
 
-This reporitory contains all the data files of the STAR-localization dataset in csv format. 
+This reporitory contains all the data files of the STAR-localization dataset in csv format.
 
-This reporitory is the recommended starting point for using the dataset. For background information on the data, including setup descriptions, calibration and postprocessing procedures, and links to the raw datafiles (in ROS bag format) please refer to our [arXiv (ADD LINK!)](link-here) report. 
-
-## Authors
-
+This reporitory is the recommended starting point for using the dataset. For background information on the data, including setup descriptions, calibration and postprocessing procedures, and links to the raw datafiles (in ROS bag format) please refer to our [report](https://drive.google.com/file/d/1QbwCDW5RjnWJaWT-bpR-nFcC4loe5t9n/view?usp=drive_link). 
 
 ## How to use
 
-- Quick start guide
-- Citation 
+The dataset is provided in raw csv files and can thus be parsed from using your language of choice. For python, we recommend to take a look at the `reader.py` module provided in this repository (installation of `pandas` required). 
 
 ## Frames
 
