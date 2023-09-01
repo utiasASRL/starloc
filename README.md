@@ -1,18 +1,18 @@
 STAR-loc: Dataset for STereo And Range-based localization
 =========================================================
 
-This reporitory contains all the data files of the STAR-localization dataset in csv format.
+This repository contains all the data files of the STAR-localization dataset in csv format.
 
-This reporitory is the recommended starting point for using the dataset. For background information on the data, including setup descriptions, calibration and postprocessing procedures, and links to the raw datafiles (in ROS bag format) please refer to our [report](https://drive.google.com/file/d/1QbwCDW5RjnWJaWT-bpR-nFcC4loe5t9n/view?usp=drive_link). 
+This repository is the recommended starting point for using the dataset. For background information on the data, including setup descriptions, calibration and postprocessing procedures, and links to the raw datafiles (in ROS bag format) please refer to our [report](https://drive.google.com/file/d/1QbwCDW5RjnWJaWT-bpR-nFcC4loe5t9n/view?usp=drive_link). 
 
 ## How to use
 
-The dataset is provided in raw csv files and can thus be parsed from using your language of choice. For python, we recommend to take a look at the `reader.py` module provided in this repository (installation of `pandas` required). 
+The dataset is provided in raw csv files and can thus be parsed from your programming language of choice. For python, we recommend to take a look at the `reader.py` module provided in this repository (installation of `pandas` required). 
 
 ## Frames
 
 ### Definitions
-We use the following conventions for frames. The world frame is the Vicon system's reference frame. The rig frame ($F_r$) is the frame on the sensor rig, that is tracked by the Vicon system. See Figure 1 for how it is defined. The camera frame ($ F_c $) is centered in the left camera with z pointing in the viewing direction and y pointing down (see Figure 1, and note that the camera is mounted upside-down on the rig). Note that the dimensions of the camera frame are approximate -- they are refined in the calibration procedure (more details below). The IMU frame is inside the stereo camera and defined by its transform to the left camera frame, which is provided by the manufacturers. We also define the tag frames $F_{t_i}$, centered at the three different tag locations, and orientated as the rig frame. 
+We use the following conventions for frames. The world frame is the Vicon system's reference frame. The rig frame ($F_r$) is the frame on the sensor rig, which is tracked by the Vicon system. See Figure 1 for how it is defined. The camera frame ($ F_c $) is centered in the left camera with z pointing in the viewing direction and y pointing down (see Figure 1, and note that the camera is mounted upside-down on the rig). Note that the dimensions of the camera frame are approximate -- they are refined in the calibration procedure (more details below). The IMU frame is inside the stereo camera and defined by its transform to the left camera frame, which is provided by the manufacturers. We also define the tag frames $F_{t_i}$, centered at the three different tag locations, and orientated as the rig frame. 
 
 ![](doc/frames.png)
 <p style="text-align: center;"><em> Figure 1: Definition of frames and their (approximate) dimensions. Note that the camera frame dimensions are inaccuarate. The calibrated dimensions can be found in the calib.json files of each data directory. </em></p>
@@ -33,14 +33,14 @@ where $q_b$ is a vector expressed in frame $b$ and $q_a$ is the same vector expr
 All csv files contain the following columns:
 
 - time_s: time since start of experiment (first Vicon measurement)
-- x,y, z:  ground truth *rig* pose (translation)
+- x,y,z:  ground truth *rig* pose (translation)
 - w, rot_x, rot_y, rot_z:  ground truth *rig* pose (rotation)
 
 Ultra-Wideband measurements (`<dataset-name>/uwb.csv`):
 
 - range: raw distance measurement in meters
 - from_id: tag id (1 or 2), measurement radio on the rig
-- to_id: anchor id, radios fixed in the room.
+- to_id: anchor id, radios fixed in the room
 - tag_pos_x, tag_pos_y, tag_pos_z:  ground truth *tag* pose (translation)
 - bias:  distance bias in meters
 - gt_range:  ground truth distance from anchor to tag in meters
@@ -67,12 +67,14 @@ IMU measurements (`<dataset-name>/imu.csv`):
 - left_u, left_v: pixel-locations of apriltag center detection in left rectified image
 - right_u, right_v: pixel-locations of apriltag center detection in right rectified image
 
-(recommended) Globally calibrated Apriltag measurements  (`<dataset-name>/apriltag_calib_*.csv`):
+(recommended) Calibrated Apriltag measurements  (`<dataset-name>/apriltag_cal*.csv`):
 
-We provide:
 
-- `apriltag_calib_global.csv`: globally calibrated, using the transform from the *apriltag_s3* dataset.
-- `apriltag_calib_individual.csv`: individually calibrated: the best transform for this particular dataset is found using the ground truth data. This results in the best possible data match, but is more unrealistic than the globally calibrated data. 
+The unknown transform from the rig to the stereo camera (left frame) is calculated, the pose is calculated accordingly, and ground truth pixel measurements are provided. We provide three different calibration methods:
+
+- `apriltag_cal.csv`: uses the approximate CAD dimensions for the transform
+- `apriltag_cal_global.csv`: globally calibrated, using the transform from the *apriltag_s3* dataset.
+- `apriltag_cal_individual.csv`: individually calibrated: the best transform for this particular dataset is found using the ground truth data. This results in the best possible data match, but is more unrealistic than the globally calibrated data. 
 
 Those files have the same fields as `apriltag.csv`, plus:
  
