@@ -9,6 +9,18 @@ This repository is the recommended starting point for using the dataset. For bac
 
 The dataset is provided in raw csv files and can thus be parsed from your programming language of choice. For python, we recommend to take a look at the `reader.py` module provided in this repository (installation of `pandas` required). 
 
+Please cite the following [arXiv paper](https://arxiv.org/abs/2309.05518) if you are using this dataset. 
+
+```bibtex
+@article{starloc,
+  title = {{{STAR-loc}}: {{Dataset}} for {{STereo And Range-based}} Localization},
+  author = {D{\"u}mbgen, Frederike and Shalaby, Mohammed A. and Holmes, Connor and Cossette, Charles C. and Forbes, James R. and Ny, Jerome Le and Barfoot, Timothy D.},
+  year = {2023},
+  journal = {arXiv:2309.05518 [cs.RO]},
+  doi = {10.48550/arXiv.2309.05518},
+}
+```
+
 ## Frames
 
 ### Definitions
