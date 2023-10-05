@@ -14,7 +14,7 @@ Please cite the following [arXiv paper](https://arxiv.org/abs/2309.05518) if you
 ```bibtex
 @article{starloc,
   title = {{{STAR-loc}}: {{Dataset}} for {{STereo And Range-based}} Localization},
-  author = {D{\"u}mbgen, Frederike and Shalaby, Mohammed A. and Holmes, Connor and Cossette, Charles C. and Forbes, James R. and Ny, Jerome Le and Barfoot, Timothy D.},
+  author = {D{\"u}mbgen, Frederike and Shalaby, Mohammed A. and Holmes, Connor and Cossette, Charles C. and Forbes, James R. and Le Ny, Jerome and Barfoot, Timothy D.},
   year = {2023},
   journal = {arXiv:2309.05518 [cs.RO]},
   doi = {10.48550/arXiv.2309.05518},
